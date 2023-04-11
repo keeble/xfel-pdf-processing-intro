@@ -33,6 +33,9 @@ style: |
 5. AOB
 
 ---
+# Dean, have you pressed record? 
+
+---
 ![bg opacity](../assets/gradient.jpeg)
 # uf-TS/PDF Processing Requirements
 Dean Keeble
@@ -87,6 +90,7 @@ In order to extract the TS from a "normal" powder diffraction pattern, we need t
 ### A reminder of the proposed detector geometry on HED
 
 ---
+![bg opacity](../assets/gradient.jpeg)
 ## Fundamental Requirements
 * Data that are *reproducible*
 * Data that are *calibratable*
@@ -118,12 +122,14 @@ p {
   - as used in PDFgetX3
 ---
 ## One possible solution
-- we populate small database with sample data beforehand
+- we populate a small sample database beforehand
 - (somehow) get this metadata at the point of data collection
 - use pyFAI to integrate data to 1D
 - use PDFgetX3 to subtract container, normalise, FT [tenuous example](https://ispyb.diamond.ac.uk/dc/visit/cy32171-1/dcg/8949620)
+
 ---
 ## Processing vs Analysis
 - Everything up to this point is "processing"
-- Some analyses need no further data (cluster analysis, NMF etc.)
-- Some analyses (such as fitting) require further sample information
+- Some analyses need no further data (peak fitting etc.)
+- Some require further linking (cluster analysis, NMF etc.)
+- Some require further sample information (structural fitting)
