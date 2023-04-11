@@ -5,7 +5,7 @@ size: 16:9
 backgroundImage: url('../assets/dls_blue.png')
 style: |
   h1 {
-    font-size: 4rem;
+    font-size: 3.2rem;
   }
   h2 {
      font-size: 2.2rem; 
@@ -21,12 +21,35 @@ style: |
     color: var(--text);
   }
 ---
-# Intro Slide 
+## uf-TS/PDF EuXFEL Processing/Analysis Meeting
 ![bg opacity](../assets/gradient.jpeg)
-Dean Keeble
-Somewhere, sometime
 
 ---
+## Agenda
+1. uf-TS/PDF processing requirements (Dean)
+2. EuXFEL processing capabilities (Luca)
+3. Discussion of best processing route
+4. Downstream analysis
+5. AOB
+
+---
+# uf-TS/PDF Processing Requirements
+![bg opacity](../assets/gradient.jpeg)
+Dean Keeble
+12 April 2023
+
+---
+## Contents
+- What is TS/PDF
+- What is different to "normal" scattering experiments
+- Processing vs Analysis
+- What is required to process the data
+- One possible solution
+---
+## What is TS/PDF
+
+---
+
 ## List of things
 Normal markdown rules apply:
 
@@ -44,3 +67,5 @@ It helps us keep track of:
 ![bg opacity](../assets/gradient.jpeg)
 # fitting long lines to page width
 #### <!--fit--> https://www.diamond.ac.uk/Instruments/Crystallography/I19/Manual/EH1.html
+
+---
