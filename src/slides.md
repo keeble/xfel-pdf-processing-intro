@@ -47,6 +47,7 @@ Dean Keeble
 - One possible solution
 ---
 ## What is TS/PDF
+![](../assets/scattering.jpg)
 
 ---
 
