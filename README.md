@@ -1,5 +1,5 @@
-# deans-marp-template
+# xfel-pdf-processing intro
 
-a template repo for marp presentations which dean thinks looks nice
+To be presented on 12th April 2023
 
 Written using [marp](https://marp.app/)
