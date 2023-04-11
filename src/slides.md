@@ -42,9 +42,14 @@ Dean Keeble
 ## Contents
 - What is TS/PDF
 - What is different to "normal" scattering experiments
-- Processing vs Analysis
 - What is required to process the data
 - One possible solution
+- Processing vs Analysis
+---
+![bg opacity](../assets/gradient.jpeg)
+## What is a PDF? 
+![height:350](../assets/c60_pdfs.png) ![height:350](../assets/c60.png) 
+
 ---
 ![bg right width:634](../assets/scattering.jpg)
 ## What is TS/PDF?
@@ -55,48 +60,70 @@ F(Q) = \sum _{i,j=1}^{n} c_ic_jf_i(Q)f_j(Q)[A_{ij}(Q)-1]
 $$
 
 ---
-## What is the PDF?
+## How to get a PDF?
 If you've successfully extracted your $F(Q)$, it's straightforward$^{\mathsf{TM}}$ to convert it to the pair distribution function
 $$
 G(r)=\frac{1}{8\pi^3\rho_0}\int_0^{\infty}4\pi Q^2F(Q)\frac{\sin Qr}{Qr} \,\text{d}r
 $$
 
 ---
-![bg opacity](../assets/gradient.jpeg)
-## and why bother
-![height:350](../assets/c60_pdfs.png) ![height:350](../assets/c60.png) 
+<style scoped>
+li {
+   font-size: 1.2rem;
+},
+p {
+   font-size: 1.3rem;
+}
+</style>
+## Differences to "normal" diffraction
+In order to extract the TS from a "normal" powder diffraction pattern, we need to:
+1. Correctly subract the scattering from anything which isn't the sample
+2. Correctly subtract everything which isn't coherent scattering
+3. Normalise our data to arrive at the differential scattering cross section
+4. Normalise to the sample's form factors
 
 ---
-## What is  different to "normal" scattering experiments
-So a total scattering experiment is just a scattering experiment 
+![bg right height:670](../assets/hed.png)
+### A reminder of the proposed detector geometry on HED
 
 ---
-## Processing vs Analysis
+## Fundamental Requirements
+* Data that are *reproducible*
+* Data that are *calibratable*
+* Data that are *mergeable*
+* A way to record and retrieve backgrounds/substrates/containers
+* A way to record and retrieve sample metadata
+* A way to link data from different $2\theta$ positions
+
 
 ---
-## What is required to process the data
+<style scoped>
+li {
+   font-size: 1.2rem;
+},
+p {
+   font-size: 1.3rem;
+}
+</style>
 
+
+## The two approaches
+* Fully correct everything
+  - relies on exactly known experimental conditions
+  - delivers correctly scaled TS/PDF
+  - as used in gudrun, PDFgetX2, vaxadium
+* The "*ad hoc* method"
+  - leverages known behaviour of various functions as $\{Q,r\}\to \{0,\infty\}$
+  - delivers TS/PDF with arbitrary scale factor
+  - as used in PDFgetX3
 ---
 ## One possible solution
-
+- we populate small database with sample data beforehand
+- (somehow) get this metadata at the point of data collection
+- use pyFAI to integrate data to 1D
+- use PDFgetX3 to subtract container, normalise, FT [tenuous example](https://ispyb.diamond.ac.uk/dc/visit/cy32171-1/dcg/8949620)
 ---
-
-## List of things
-Normal markdown rules apply:
-
-It helps us keep track of: 
-- things
-- other things
-- those things over there
-- and more! :o: :smiley: :white_check_mark:
-
----
-<!--- make pictures wide --->
-![bg w:1268](../assets/wide_picture.jpg)
-
----
-![bg opacity](../assets/gradient.jpeg)
-# fitting long lines to page width
-#### <!--fit--> https://www.diamond.ac.uk/Instruments/Crystallography/I19/Manual/EH1.html
-
----
+## Processing vs Analysis
+- Everything up to this point is "processing"
+- Some analyses need no further data (cluster analysis, NMF etc.)
+- Some analyses (such as fitting) require further sample information
