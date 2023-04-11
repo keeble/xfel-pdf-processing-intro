@@ -33,8 +33,8 @@ style: |
 5. AOB
 
 ---
-# uf-TS/PDF Processing Requirements
 ![bg opacity](../assets/gradient.jpeg)
+# uf-TS/PDF Processing Requirements
 Dean Keeble
 12 April 2023
 
@@ -60,6 +60,11 @@ If you've successfully extracted your $F(Q)$, it's straightforward$^{\mathsf{TM}
 $$
 G(r)=\frac{1}{8\pi^3\rho_0}\int_0^{\infty}4\pi Q^2F(Q)\frac{\sin Qr}{Qr} \,\text{d}r
 $$
+
+---
+![bg opacity](../assets/gradient.jpeg)
+## and why bother
+![height:350](../assets/c60_pdfs.png) ![height:350](../assets/c60.png) 
 
 ---
 ## What is  different to "normal" scattering experiments
