@@ -21,7 +21,7 @@ style: |
     color: var(--text);
   }
 ---
-## uf-TS/PDF EuXFEL Processing/Analysis Meeting
+# uf-TS/PDF EuXFEL Processing/Analysis Meeting
 ![bg opacity](../assets/gradient.jpeg)
 
 ---
@@ -46,8 +46,33 @@ Dean Keeble
 - What is required to process the data
 - One possible solution
 ---
-## What is TS/PDF
-![](../assets/scattering.jpg)
+![bg right width:634](../assets/scattering.jpg)
+## What is TS/PDF?
+TS = Total Scattering
+i.e. we want to get to $F(Q)$, the total scattering structure factor
+$$ 
+F(Q) = \sum _{i,j=1}^{n} c_ic_jf_i(Q)f_j(Q)[A_{ij}(Q)-1]
+$$
+
+---
+## What is the PDF?
+If you've successfully extracted your $F(Q)$, it's straightforward$^{\mathsf{TM}}$ to convert it to the pair distribution function
+$$
+G(r)=\frac{1}{8\pi^3\rho_0}\int_0^{\infty}4\pi Q^2F(Q)\frac{\sin Qr}{Qr} \,\text{d}r
+$$
+
+---
+## What is  different to "normal" scattering experiments
+So a total scattering experiment is just a scattering experiment 
+
+---
+## Processing vs Analysis
+
+---
+## What is required to process the data
+
+---
+## One possible solution
 
 ---
 
