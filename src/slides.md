@@ -33,12 +33,15 @@ style: |
 5. AOB
 
 ---
-# Dean, have you pressed record? 
-
----
+<style scoped>
+p {
+   font-weight: 200;
+}
+</style>
 ![bg opacity](../assets/gradient.jpeg)
 # uf-TS/PDF Processing Requirements
 Dean Keeble
+*Senior Software Scientist, Diamond Light Source*
 12 April 2023
 
 ---
@@ -56,8 +59,7 @@ Dean Keeble
 ---
 ![bg right width:634](../assets/scattering.jpg)
 ## What is TS/PDF?
-TS = Total Scattering
-i.e. we want to get to $F(Q)$, the total scattering structure factor
+We want to get to $F(Q)$, the total scattering structure factor
 $$ 
 F(Q) = \sum _{i,j=1}^{n} c_ic_jf_i(Q)f_j(Q)[A_{ij}(Q)-1]
 $$
@@ -99,33 +101,33 @@ In order to extract the TS from a "normal" powder diffraction pattern, we need t
 * A way to record and retrieve sample metadata
 * A way to link data from different $2\theta$ positions
 
-
 ---
 <style scoped>
-li {
-   font-size: 1.2rem;
-},
-p {
-   font-size: 1.3rem;
+table, tr, td {
+  background: #212945;
+  color: white
+}
+th {
+  background: white ;
+  color: #212945; 
+  font-size: 1.3rem;
 }
 </style>
-
-
 ## The two approaches
-* Fully correct everything
-  - relies on exactly known experimental conditions
-  - delivers correctly scaled TS/PDF
-  - as used in gudrun, PDFgetX2, vaxadium
-* The "*ad hoc* method"
-  - leverages known behaviour of various functions as $\{Q,r\}\to \{0,\infty\}$
-  - delivers TS/PDF with arbitrary scale factor
-  - as used in PDFgetX3
+| Fully correct everything | The "*ad hoc* method" |
+|:---|:---|
+| relies on exactly known experimental conditions | leverages known behaviour of various functions as $\{Q,r\}\to \{0,\infty\}$ |
+| delivers correctly scaled TS/PDF | delivers TS/PDF with arbitrary scale factor|
+| as used in gudrun, PDFgetX2, vaxadium | as used in PDFgetX3 |
+
 ---
 ## One possible solution
 - we populate a small sample database beforehand
-- (somehow) get this metadata at the point of data collection
-- use pyFAI to integrate data to 1D
-- use PDFgetX3 to subtract container, normalise, FT [tenuous example](https://ispyb.diamond.ac.uk/dc/visit/cy32171-1/dcg/8949620)
+- access this metadata at the point of data collection
+- trigger one (or more) [jupyter notebooks](https://ispyb.diamond.ac.uk/dc/visit/cy32171-1/dcg/8949620)
+  - use pyFAI to integrate data to 1D
+  - use PDFgetX3 to subtract container, normalise, FT 
+- ... analysis? 
 
 ---
 ## Processing vs Analysis
